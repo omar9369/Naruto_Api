@@ -10,33 +10,31 @@ import Foundation
 typealias CompletionHandler = (()->())?
 class ViewModel {
     
-    var arr: Naruto?
+    var arr: [NarutoInfo] = []
     var error: Error?
     
     func fetchData(completionHandler: CompletionHandler){
         APIHandler.shared.fetchData { (arr, error) in
-            //self.arr = arr ?? nil
+            self.arr = arr
             self.error = error
             completionHandler?()
         }
     }
     
-//    func getRows() -> Int{
-//        return arr.count
-//    }
+    func getRows() -> Int{
+        return arr.count
+    }
     
-   // func getObject(index: Int) -> Naruto{
-//        return arr[index]
-//    }
+    func getObject(index: Int) -> NarutoInfo{
+        return arr[index]
+    }
     
-    func getStrings(naruto: Naruto) -> String{
+    func getStrings(naruto: NarutoInfo) -> String{
         
-        let request_hash = naruto.results
-//        let title = naruto.title
-//        let type = naruto.type
-//        let rated = naruto.rated
-//        let combined = "\(title), \(type), \(rated)"
-        let combined = "\(request_hash)"
+        let title = naruto.title
+        let type = naruto.type
+        let image_URL = naruto.image_url
+        let combined = "\(title),\(type),\(image_URL)"
         return combined
     }
     

@@ -8,7 +8,7 @@
 import Foundation
 
 
-typealias APICompletionHandler = ((Naruto?, Error?) -> ())?
+typealias APICompletionHandler = (([NarutoInfo], Error?) -> ())?
 class APIHandler{
     static let shared = APIHandler.init()
     
@@ -21,11 +21,11 @@ class APIHandler{
             if error == nil && data != nil{
                 let jd = JSONDecoder.init()
                 
-                let arr = try? jd.decode( Naruto.self, from: data!)
-                print(arr)
-                completionHandle?(arr, nil)
+                let arr = try! jd.decode( Naruto.self, from: data!)
+                //print(arr.results)
+                completionHandle?(arr.results, nil)
             }else{
-                completionHandle?(nil,error)
+                completionHandle?([],error)
             }
         }.resume()
     }
