@@ -33,11 +33,9 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate{
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as? CustomCell
         let naruto = vm.getObject(index: indexPath.row)
-       // print(naruto)
-//        let title = naruto.title
-        cell?.textLabel!.text = vm.getStrings(naruto: naruto)
+        cell?.setCell(naruto: naruto)
         return cell ?? UITableViewCell.init()
     }
 }

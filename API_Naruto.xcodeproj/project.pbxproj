@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0730BF4526335A300082A95A /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0730BF4426335A300082A95A /* CustomCell.swift */; };
 		07316D9C2633299100F11C4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07316D9B2633299100F11C4A /* AppDelegate.swift */; };
 		07316D9E2633299100F11C4A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07316D9D2633299100F11C4A /* SceneDelegate.swift */; };
 		07316DA02633299100F11C4A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07316D9F2633299100F11C4A /* ViewController.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0730BF4426335A300082A95A /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		07316D982633299100F11C4A /* API_Naruto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = API_Naruto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07316D9B2633299100F11C4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		07316D9D2633299100F11C4A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				07316DA92633299200F11C4A /* Info.plist */,
 				07316DCE263329CE00F11C4A /* APIHandler.swift */,
 				07316DD326332C9C00F11C4A /* ViewModel.swift */,
+				0730BF4426335A300082A95A /* CustomCell.swift */,
 			);
 			path = API_Naruto;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 				07316DA02633299100F11C4A /* ViewController.swift in Sources */,
 				07316D9C2633299100F11C4A /* AppDelegate.swift in Sources */,
 				07316D9E2633299100F11C4A /* SceneDelegate.swift in Sources */,
+				0730BF4526335A300082A95A /* CustomCell.swift in Sources */,
 				07316DCF263329CE00F11C4A /* APIHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
