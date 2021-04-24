@@ -13,6 +13,7 @@ class ViewModel {
     var arr: [NarutoInfo] = []
     var error: Error?
     
+    
     func fetchData(completionHandler: CompletionHandler){
         APIHandler.shared.fetchData { (arr, error) in
             self.arr = arr
@@ -21,21 +22,17 @@ class ViewModel {
         }
     }
     
+    /// This will get the amount of objects in the array
+    /// - Returns: returns the number of elements in the array
     func getRows() -> Int{
         return arr.count
     }
     
+    /// This method will get the element in a specific index from NarutoInfo
+    /// - Parameter index: Will pass in the specific index
+    /// - Returns: The element from the specific index
     func getObject(index: Int) -> NarutoInfo{
         return arr[index]
-    }
-    
-    func getStrings(naruto: NarutoInfo) -> String{
-        
-        let title = naruto.title
-        let type = naruto.type
-        let image_URL = naruto.image_url
-        let combined = "\(title),\(type),\(image_URL)"
-        return combined
     }
     
     func geterror()->Error?{

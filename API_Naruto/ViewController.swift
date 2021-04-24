@@ -28,6 +28,9 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: UITableViewDataSource, UITableViewDelegate{
+    
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return vm.getRows()
     }
@@ -38,7 +41,16 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate{
         cell?.setCell(naruto: naruto)
         return cell ?? UITableViewCell.init()
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let naruto = vm.getObject(index: indexPath.row)
+        if let urlNaruto = URL(string: "\(naruto.url)"){
+            UIApplication.shared.open(urlNaruto)
+        }
+    }
 }
+
+
 
 struct Naruto: Decodable {
     let results: [NarutoInfo]
@@ -48,4 +60,5 @@ struct NarutoInfo: Decodable {
     let title: String
     let type: String
     let image_url: String
+    let url: String
 }

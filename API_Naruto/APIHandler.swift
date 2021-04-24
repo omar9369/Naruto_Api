@@ -14,6 +14,9 @@ class APIHandler{
     
     private init(){}
     
+    
+    /// This will fetch the data from the API and decode it so that swift code will understand the JSON file
+    /// - Parameter completionHandle: We use a completion handler so that the information we get from from the api will be sent to the viewModel
     func fetchData(completionHandle: APICompletionHandler){
         guard let url = URL.init(string: "https://api.jikan.moe/v3/search/anime?q=naruto") else {return}
         

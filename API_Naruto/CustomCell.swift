@@ -23,6 +23,10 @@ class CustomCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    
+    
+    /// This will set the cells in the TableViewCell
+    /// - Parameter naruto: This is the struct that has the information from the API
     func setCell(naruto: NarutoInfo){
         title.text = naruto.title
         type.text = naruto.type
